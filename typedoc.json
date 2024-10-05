@@ -1,0 +1,16 @@
+{
+  "entryPoints": ["./src/index.ts"],
+  "out": "./docs",
+  "disableSources": true,
+  "plugin": ["./dist/index.js", "typedoc-plugin-replace-text"],
+  "omitDocumentTypeInPageHeadings": false,
+  "replaceText": {
+    "replacements": [
+      {
+        "pattern": "#+ Example(?:(?!^#).)*",
+        "flags": "gmis",
+        "replace": ""
+      }
+    ]
+  }
+}
